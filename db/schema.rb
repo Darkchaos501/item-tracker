@@ -11,6 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130818181927) do
+
+  create_table "weapons", force: true do |t|
+    t.string   "weapon_name"
+    t.string   "weapon_type"
+    t.string   "weapon_dmg"
+    t.string   "weapon_def"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

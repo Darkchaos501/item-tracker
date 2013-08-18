@@ -1,0 +1,33 @@
+<h1>Listing weapons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weapon name</th>
+      <th>Weapon type</th>
+      <th>Weapon dmg</th>
+      <th>Weapon def</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weapons.each do |weapon| %>
+      <tr>
+        <td><%= weapon.weapon_name %></td>
+        <td><%= weapon.weapon_type %></td>
+        <td><%= weapon.weapon_dmg %></td>
+        <td><%= weapon.weapon_def %></td>
+        <td><%= link_to 'Show', weapon %></td>
+        <td><%= link_to 'Edit', edit_weapon_path(weapon) %></td>
+        <td><%= link_to 'Destroy', weapon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weapon', new_weapon_path %>
